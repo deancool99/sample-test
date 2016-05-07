@@ -1,0 +1,6 @@
+{
+	"deposit_cannot_be_zero": "The amount of margin deposit account can not be zero",
+	"deposit_cannot_be_negative": "The amount of margin deposit account can not be negative number",
+	"auth_failed": "Auth Failed",
+	"enter_least_one_search_field": "*Please enter at least one of search field"
+}

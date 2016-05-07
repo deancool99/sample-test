@@ -1,0 +1,6 @@
+{
+	"deposit_cannot_be_zero": "保证金账户金额不能为0",
+	"deposit_cannot_be_negative": "保证金账户金额不能为负数",
+	"auth_failed": "验证失败",
+	"enter_least_one_search_field": "请输入至少一个查询条件"
+}

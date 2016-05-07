@@ -1,0 +1,22 @@
+{
+	"customer_detail": "客户信息",
+	"main_details": "主要信息",
+	"ext_name": "联系人姓名",
+	"credit_rating": "信用评级",
+	"invest_or_non_invest": "投资类型",
+	"customer_group": "客户分组",
+	"sales_desk": "销售分组",
+	"customer_country": "客户所属国家",
+	"customer_grading": "客户分级",
+	"business_unit": "所属业务线",
+	"external": "外部ID",
+	"last_modified": "上一次修改",
+	"risk_level": "风险评级",
+	"contact_address": "联系地址",
+	"region_province": "地区",
+	"postal_code": "邮编",
+	"billing_address": "账单地址",
+	"back_to_search": "返回至查询",
+	"selcet_user": "选择用户",
+	"search_result": "查询结果"
+}

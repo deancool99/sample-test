@@ -1,0 +1,6 @@
+{
+    "deposit_cannot_be_zero": "保證金賬戶金額不能為0",
+    "deposit_cannot_be_negative": "保證金賬戶金額不能為負數",
+    "auth_failed": "驗證失敗",
+    "enter_least_one_search_field": "請輸入至少一個查詢條件"
+}

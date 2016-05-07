@@ -1,0 +1,7 @@
+.animateLeft {
+    transition: all 450ms ease-in 200ms;
+    -webkit-transition: all 450ms ease-in 200ms;
+}
+.disabled{
+    cursor: not-allowed
+}

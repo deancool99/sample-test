@@ -1,0 +1,5 @@
+.calenderDay>ul>li>div:hover
+{
+  background-color:#B9B9B9;
+  color:white !important;
+}

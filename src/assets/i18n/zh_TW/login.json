@@ -1,0 +1,17 @@
+{
+    "kvb_efx_platform": "KVB在線外匯交易平台",
+    "fex_trading_platform": "為您提供一站式在線外匯電子交易平台,滿足您日常的企業及個人外匯需求。",
+    "welcome_online_transaction_web": "歡迎您使用全新的KVB EFX在線外匯交易平台",
+    "prompt": "請輸入您的登陸信息:",
+    "username": "用戶名",
+    "password": "密碼",
+    "forget_password": "忘記密碼?",
+    "please_enter_username": "請輸入您的用戶名",
+    "username_only_number": "請輸入正確的用戶名格式(只限數字)",
+    "please_enter_password": "請輸入您的密碼",
+    "please_enter_captcha": "請輸入驗證碼",
+    "captcha_try_again": "請輸入正確的驗證碼",
+    "loading": "正在載入…",
+    "toekn_expired": "用戶超時自動登出",
+    "sure_you_want_to_leave_user": "您確認要離開嗎?"
+}

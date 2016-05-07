@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NativeAPI</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h2 id="v-air-app-native-api-javascript">V-Air App Native API @ Javascript</h2>
+
+<ul>
+<li><h3 id="platform">Platform</h3>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs avrasm">Android<span class="hljs-preprocessor">.ClassName</span><span class="hljs-preprocessor">.MethodName</span>(args)<span class="hljs-comment">;</span>
+
+EX : Android<span class="hljs-preprocessor">.Navigation</span><span class="hljs-preprocessor">.set</span>(args)<span class="hljs-comment">;</span>
+</code></pre>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs coffeescript"><span class="hljs-reserved">var</span> request = <span class="hljs-string">'IOS:ClassName:MethodName:'</span> + args;
+
+EX :
+
+<span class="hljs-reserved">var</span> request = <span class="hljs-string">'IOS:Navigation:set:{"title":"test"}'</span>;
+<span class="hljs-reserved">var</span> iframe = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'IFRAME'</span>);
+iframe.setAttribute(<span class="hljs-string">'src'</span>, request);
+<span class="hljs-built_in">document</span>.documentElement.appendChild(iframe);
+iframe.parentNode.removeChild(iframe);
+iframe = <span class="hljs-literal">null</span>;
+</code></pre></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><h3 id="class-navigation-v1">Class : Navigation (v1)</h3>
+
+<h4 id="method-set">Method : Set</h4>
+
+<blockquote>
+  <p>設定 Native Navigation Bar</p>
+</blockquote>
+
+<ul><li><h5 id="args">args</h5>
+
+<pre class="prettyprint"><code class=" hljs cs">{
+    left:{
+      name:<span class="hljs-string">'Back'</span>,
+      icon:<span class="hljs-string">'back'</span>,<span class="hljs-comment">//[String] back , home ,edit ,next,done</span>
+      action : <span class="hljs-string">'home'</span> <span class="hljs-comment">// home : 回到首頁 , null : 不做任何操作</span>
+    },
+    right:{
+      name:<span class="hljs-string">'Next'</span>,
+      icon:<span class="hljs-string">'next'</span>,<span class="hljs-comment">//[String] back , home ,edit ,next,done</span>
+      action : <span class="hljs-string">'home'</span> <span class="hljs-comment">// home : 回到首頁 ,null : 不做任何操作</span>
+    }
+    title:<span class="hljs-string">'title'</span><span class="hljs-comment">//[String]</span>
+}</code></pre></li>
+<li><h4 id="sample">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs cs"><span class="hljs-keyword">var</span> options = {
+  left:{
+    name:<span class="hljs-string">'Back'</span>,
+    icon:<span class="hljs-string">'back'</span>,
+    action : <span class="hljs-keyword">null</span>
+  },
+  right:{
+    name:<span class="hljs-string">'Next'</span>,
+    icon:<span class="hljs-string">'next'</span>,
+    action : <span class="hljs-keyword">null</span>
+  }
+  title:<span class="hljs-string">'Guest Detail'</span>
+};
+
+<span class="hljs-keyword">if</span>(Android.Navigation &amp;&amp; Android.Navigation.<span class="hljs-keyword">set</span>)
+    Android.Navigation.<span class="hljs-keyword">set</span>(options);
+}</code></pre>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs javascript"><span class="hljs-keyword">var</span> options = {
+  left:{
+    name:<span class="hljs-string">'Back'</span>,
+    icon:<span class="hljs-string">'back'</span>,
+    action : <span class="hljs-literal">null</span>
+  },
+  right:{
+    name:<span class="hljs-string">'Next'</span>,
+    icon:<span class="hljs-string">'next'</span>,
+    action : <span class="hljs-literal">null</span>
+  }
+  title:<span class="hljs-string">'Guest Detail'</span>
+};
+<span class="hljs-keyword">var</span> opts = <span class="hljs-built_in">JSON</span>.stringify(options);
+window.location  = <span class="hljs-string">'IOS:Navigation:set:'</span> + opts;</code></pre></li></ul>
+
+<h4 id="method-setstatus">Method : setStatus</h4>
+
+<blockquote>
+  <p>設定 Native Navigation Bar 狀態</p>
+</blockquote>
+
+<ul><li><h5 id="args-1">args</h5>
+
+<pre class="prettyprint"><code class=" hljs css"><span class="hljs-rules">{
+<span class="hljs-rule"><span class="hljs-attribute">enable </span>:<span class="hljs-value"> true // [boolean]
+</span></span></span>}</code></pre></li>
+<li><h4 id="sample-1">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs avrasm">var options = {
+  enable : true
+}<span class="hljs-comment">;</span>
+if(Android<span class="hljs-preprocessor">.Navigation</span> &amp;&amp; Android<span class="hljs-preprocessor">.Navigation</span><span class="hljs-preprocessor">.setStatus</span>)
+      Android<span class="hljs-preprocessor">.Navigation</span><span class="hljs-preprocessor">.setStatus</span>(options)<span class="hljs-comment">;</span>
+  }</code></pre>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs javascript">  <span class="hljs-keyword">var</span> options = {
+    enable : <span class="hljs-literal">true</span>
+  };
+  <span class="hljs-keyword">var</span> opts = <span class="hljs-built_in">JSON</span>.stringify(options);
+  window.location  = <span class="hljs-string">'IOS:Navigation:setStatus:'</span> + opts;</code></pre></li></ul></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><h3 id="class-modal-v1">Class : Modal (v1)</h3>
+
+<h4 id="method-show">Method : Show</h4>
+
+<blockquote>
+  <p>顯示 Modal</p>
+</blockquote>
+
+<ul><li><h5 id="args-2">args</h5>
+
+<pre class="prettyprint"><code class=" hljs css"><span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">title</span>:<span class="hljs-value"><span class="hljs-string">'title'</span>//[String],
+  buttons:[{
+    name:<span class="hljs-string">'Cancel'</span>,
+    icon:<span class="hljs-string">'cancel'</span>,
+    action : <span class="hljs-string">'close'</span> // close : 關閉Modal,
+    callback:<span class="hljs-string">'callbackCancel'</span>
+    // 當user點選該button ,則Native直接呼叫webview裡面的Javascript:Native.<span class="hljs-function">callback(<span class="hljs-string">'callbackCancel'</span>)</span></span></span>;
+  <span class="hljs-rule">}</span></span>,<span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">name</span>:<span class="hljs-value"><span class="hljs-string">'Ok'</span>,
+    icon:<span class="hljs-string">'ok'</span>,
+    action : <span class="hljs-string">'close'</span> // close : 關閉Modal,
+    callback:<span class="hljs-string">'callbackOk'</span>
+    // 當user點選該button ,則Native直接呼叫webview裡面的Javascript:Native.<span class="hljs-function">callback(<span class="hljs-string">'callbackOk'</span>)</span></span></span>;
+  <span class="hljs-rule">}</span></span>]
+}</code></pre></li>
+<li><h4 id="sample-2">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs cs"><span class="hljs-keyword">var</span> options = {
+  title:<span class="hljs-string">'Test'</span>,
+  buttons:[{
+    name:<span class="hljs-string">'Cancel'</span>,
+    icon:<span class="hljs-string">'cancel'</span>,
+    callback:<span class="hljs-string">'Web.Modal.close'</span> <span class="hljs-comment">//通知web已關閉Modal</span>
+  },{
+    name:<span class="hljs-string">'Ok'</span>,
+    icon:<span class="hljs-string">'ok'</span>,
+    callback:<span class="hljs-string">'Web.Modal.ok'</span><span class="hljs-comment">//通知web已關閉Modal</span>
+  }]
+};
+
+<span class="hljs-keyword">if</span>(Android.Modal &amp;&amp; Android.Modal.show)
+    Android.Modal.show(options);
+}</code></pre>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs javascript"><span class="hljs-keyword">var</span> options = {
+  title:<span class="hljs-string">'Test'</span>,
+  buttons:[{
+    name:<span class="hljs-string">'Cancel'</span>,
+    icon:<span class="hljs-string">'cancel'</span>,
+    callback:<span class="hljs-string">'Web.Modal.close'</span> <span class="hljs-comment">//通知web已關閉Modal</span>
+  },{
+    name:<span class="hljs-string">'Ok'</span>,
+    icon:<span class="hljs-string">'ok'</span>,
+    callback:<span class="hljs-string">'Web.Modal.ok'</span><span class="hljs-comment">//通知web已關閉Modal</span>
+  }]
+};
+<span class="hljs-keyword">var</span> opts = <span class="hljs-built_in">JSON</span>.stringify(options);
+window.location  = <span class="hljs-string">'IOS:Modal:show:'</span> + opts;</code></pre></li></ul>
+
+<h4 id="method-close">Method : Close</h4>
+
+<blockquote>
+  <p>關閉 Modal</p>
+</blockquote>
+
+<ul><li><h4 id="sample-3">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<p><code> <br>
+    if(Android.Modal &amp;&amp; Android.Modal.close){ <br>
+        Android.Modal.close(); <br>
+    } <br>
+</code></p>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<p><code> <br>
+    window.location  = 'IOS:Modal:close'; <br>
+</code></p></li></ul></li>
+</ul>
+
+<hr>
+
+<ul>
+<li><h3 id="class-animate-v1">Class : Animate (v1)</h3>
+
+<h4 id="method-show-1">Method : Show</h4>
+
+<blockquote>
+  <p>顯示 Animate</p>
+</blockquote>
+
+<ul><li><h5 id="args-3">args</h5>
+
+<pre class="prettyprint"><code class=" hljs css"><span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">type</span>:<span class="hljs-value"><span class="hljs-string">'Loading'</span>//[String],
+</span></span></span>}</code></pre></li>
+<li><h4 id="sample-4">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs scala"><span class="hljs-keyword">var</span> options = {
+  <span class="hljs-keyword">type</span>:<span class="hljs-string">'Loading'</span>
+};
+
+<span class="hljs-keyword">if</span>(Android.Animate &amp;&amp; Android.Animate.show)
+    Android.Animate.show(options);
+}</code></pre>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<pre class="prettyprint"><code class=" hljs javascript"><span class="hljs-keyword">var</span> options = {
+  type:<span class="hljs-string">'Loading'</span>
+};
+<span class="hljs-keyword">var</span> opts = <span class="hljs-built_in">JSON</span>.stringify(options);
+window.location  = <span class="hljs-string">'IOS:Animate:show:'</span> + opts;</code></pre></li></ul>
+
+<h4 id="method-close-1">Method : Close</h4>
+
+<blockquote>
+  <p>關閉 Animate</p>
+</blockquote>
+
+<ul><li><h4 id="sample-5">Sample</h4>
+
+<blockquote>
+  <p>Android</p>
+</blockquote>
+
+<p><code> <br>
+    if(Android.Animate &amp;&amp; Android.Animate.close){ <br>
+        Android.Animate.close(); <br>
+    } <br>
+</code></p>
+
+<blockquote>
+  <p>IOS</p>
+</blockquote>
+
+<p><code> <br>
+    window.location  = 'IOS:Animate:close'; <br>
+</code></p></li></ul></li>
+</ul></div></body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "kvb_efx_platform": "KVB在线外汇交易平台",
+    "fex_trading_platform": "为您提供一站式在线外汇电子交易平台，满足您日常的企业及个人外汇需求。",
+    "welcome_online_transaction_web": "欢迎您使用全新的KVB EFX在线外汇交易平台",
+    "prompt": "请输入您的登陆信息：",
+    "username": "用户名",
+    "password": "密码",
+    "forget_password": "忘记密码？",
+    "please_enter_username": "请输入您的用户名",
+    "username_only_number": "请输入正确的用户名格式（只限数字）",
+    "please_enter_password": "请输入您的密码",
+    "please_enter_captcha": "请输入验证码",
+    "captcha_try_again": "请输入正确的验证码",
+    "loading": "正在载入…",
+    "toekn_expired": "用户超时自动登出",
+    "sure_you_want_to_leave_user": "您确认要离开吗？"
+}

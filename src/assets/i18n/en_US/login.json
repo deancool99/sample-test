@@ -1,0 +1,17 @@
+{
+	"kvb_efx_platform": "KVB EFX Platform",
+	"fex_trading_platform": "Our one-stop foreign exchange electronic trading platform that will assist your daily commercial or individual needs.",
+	"welcome_online_transaction_web": "Welcome To The Online Transaction Web Client",
+	"prompt": "Login your account here：",
+	"username": "Username",
+	"password": "Password",
+	"forget_password": "Forget password？",
+	"please_enter_username":"Please enter your username",
+	"username_only_number":"Please enter numbers only",
+	"please_enter_password":"Please enter your password",
+	"please_enter_captcha":"Please enter the captcha code",
+	"captcha_try_again": "Please enter a valid CAPTCHA value",
+	"loading": "Loading...",
+	"toekn_expired":"session timeout auto logout",
+	"sure_you_want_to_leave_user": "Are you sure you want to leave the user?"
+}

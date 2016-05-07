@@ -1,0 +1,22 @@
+{
+    "customer_detail": "客戶信息",
+    "main_details": "主要信息",
+    "ext_name": "聯繫人姓名",
+    "credit_rating": "信用評級",
+    "invest_or_non_invest": "投資類型",
+    "customer_group": "客戶分組",
+    "sales_desk": "銷售分組",
+    "customer_country": "客戶所屬國家",
+    "customer_grading": "客戶分級",
+    "business_unit": "所屬業務線",
+    "external": "外部ID",
+    "last_modified": "上一次修改",
+    "risk_level": "風險評級",
+    "contact_address": "聯繫地址",
+    "region_province": "地區",
+    "postal_code": "郵編",
+    "billing_address": "賬單地址",
+    "back_to_search": "返回至查詢",
+    "selcet_user": "選擇用戶",
+    "search_result": "查詢結果"
+}

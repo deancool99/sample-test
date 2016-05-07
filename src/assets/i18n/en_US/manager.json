@@ -1,0 +1,22 @@
+{
+	"customer_detail": "Customer Detail",
+	"main_details": "Main Details",
+	"ext_name": "Ext Name",
+	"credit_rating": "Credit Rating",
+	"invest_or_non_invest": "Invest/ Non Invest",
+	"customer_group": "Customer Group",
+	"sales_desk": "Sales Desk",
+	"customer_country": "Customer County",
+	"customer_grading": "Customer Grading",
+	"business_unit": "Business Unit",
+	"external": "External #",
+	"last_modified": "Last Modified",
+	"risk_level": "Risk Level",
+	"contact_address": "Contact Address",
+	"region_province": "Region/ Province",
+	"postal_code": "Postal Code",
+	"billing_address": "Billing Address",
+	"back_to_search": "Back to Search",
+	"selcet_user": "Selcet User",
+	"search_result": "Search Result"
+}
