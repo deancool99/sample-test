@@ -1,7 +1,8 @@
 import 'NodeModules/bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import HeaderPanel from 'Components/panels/headerPanel';
-import IndexPanel from 'Components/panels/indexPanel';
+//import IndexPanel from 'Components/panels/indexPanel';
+import SharePanel from 'Components/panels/sharePanel';
 import FooterPanel from 'Components/panels/footerPanel';
 const IndexView = React.createClass({
   propTypes: {
@@ -15,7 +16,7 @@ const IndexView = React.createClass({
     return (
       <div id={id}>
           <HeaderPanel/>
-          <IndexPanel/>
+          <SharePanel/>
           <FooterPanel/>
       </div>
     );
